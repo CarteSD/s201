@@ -1,0 +1,238 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<ui version="4.0">
+ <class>LecteurVue</class>
+ <widget class="QMainWindow" name="LecteurVue">
+  <property name="geometry">
+   <rect>
+    <x>0</x>
+    <y>0</y>
+    <width>893</width>
+    <height>595</height>
+   </rect>
+  </property>
+  <property name="windowTitle">
+   <string>LecteurVue</string>
+  </property>
+  <widget class="QWidget" name="centralwidget">
+   <layout class="QHBoxLayout" name="horizontalLayout_2">
+    <item>
+     <layout class="QVBoxLayout" name="verticalLayout">
+      <item>
+       <layout class="QVBoxLayout" name="verticalLayout_2">
+        <item>
+         <widget class="QLabel" name="labelTitreDiapo">
+          <property name="text">
+           <string>Titre du diaporama</string>
+          </property>
+          <property name="alignment">
+           <set>Qt::AlignLeading|Qt::AlignLeft|Qt::AlignTop</set>
+          </property>
+          <property name="margin">
+           <number>5</number>
+          </property>
+         </widget>
+        </item>
+        <item>
+         <spacer name="verticalSpacer">
+          <property name="orientation">
+           <enum>Qt::Vertical</enum>
+          </property>
+          <property name="sizeHint" stdset="0">
+           <size>
+            <width>20</width>
+            <height>40</height>
+           </size>
+          </property>
+         </spacer>
+        </item>
+        <item>
+         <widget class="QLabel" name="labelTitreCategorieImage">
+          <property name="text">
+           <string>Titre de l'image</string>
+          </property>
+          <property name="alignment">
+           <set>Qt::AlignCenter</set>
+          </property>
+          <property name="margin">
+           <number>0</number>
+          </property>
+         </widget>
+        </item>
+        <item>
+         <widget class="QLabel" name="labelNumImage">
+          <property name="text">
+           <string>Numero de l'image</string>
+          </property>
+          <property name="margin">
+           <number>3</number>
+          </property>
+         </widget>
+        </item>
+       </layout>
+      </item>
+      <item>
+       <layout class="QHBoxLayout" name="hBoutonLayout">
+        <item>
+         <spacer name="horizontalSpacer_2">
+          <property name="orientation">
+           <enum>Qt::Horizontal</enum>
+          </property>
+          <property name="sizeHint" stdset="0">
+           <size>
+            <width>40</width>
+            <height>20</height>
+           </size>
+          </property>
+         </spacer>
+        </item>
+        <item>
+         <widget class="QPushButton" name="pushButtonReculer">
+          <property name="text">
+           <string>Reculer</string>
+          </property>
+         </widget>
+        </item>
+        <item>
+         <spacer name="horizontalSpacer">
+          <property name="orientation">
+           <enum>Qt::Horizontal</enum>
+          </property>
+          <property name="sizeHint" stdset="0">
+           <size>
+            <width>40</width>
+            <height>20</height>
+           </size>
+          </property>
+         </spacer>
+        </item>
+        <item>
+         <widget class="QPushButton" name="pushButtonAvancer">
+          <property name="text">
+           <string>Avancer</string>
+          </property>
+         </widget>
+        </item>
+        <item>
+         <spacer name="horizontalSpacer_3">
+          <property name="orientation">
+           <enum>Qt::Horizontal</enum>
+          </property>
+          <property name="sizeHint" stdset="0">
+           <size>
+            <width>40</width>
+            <height>20</height>
+           </size>
+          </property>
+         </spacer>
+        </item>
+       </layout>
+      </item>
+     </layout>
+    </item>
+   </layout>
+  </widget>
+  <widget class="QMenuBar" name="menubar">
+   <property name="geometry">
+    <rect>
+     <x>0</x>
+     <y>0</y>
+     <width>893</width>
+     <height>22</height>
+    </rect>
+   </property>
+   <widget class="QMenu" name="menuDiaporama">
+    <property name="title">
+     <string>Diaporama</string>
+    </property>
+    <widget class="QMenu" name="menuChangerMode">
+     <property name="title">
+      <string>Changer de mode</string>
+     </property>
+     <addaction name="actionAuto"/>
+     <addaction name="actionManuel"/>
+    </widget>
+    <addaction name="actionChangerVitesseDefilement"/>
+    <addaction name="actionChangerDiapo"/>
+    <addaction name="menuChangerMode"/>
+    <addaction name="separator"/>
+    <addaction name="actionAvancer"/>
+    <addaction name="actionReculer"/>
+    <addaction name="separator"/>
+   </widget>
+   <widget class="QMenu" name="menuFichier">
+    <property name="title">
+     <string>Fichier</string>
+    </property>
+    <addaction name="actionEnleverDiapo"/>
+    <addaction name="separator"/>
+    <addaction name="actionQuitter"/>
+   </widget>
+   <widget class="QMenu" name="menuAide">
+    <property name="title">
+     <string>Aide</string>
+    </property>
+    <addaction name="actionAProposDe"/>
+   </widget>
+   <addaction name="menuFichier"/>
+   <addaction name="menuDiaporama"/>
+   <addaction name="menuAide"/>
+  </widget>
+  <widget class="QStatusBar" name="statusbar"/>
+  <action name="actionChangerVitesseDefilement">
+   <property name="text">
+    <string>Vitesse de défilement</string>
+   </property>
+  </action>
+  <action name="actionChangerDiapo">
+   <property name="text">
+    <string>Changer de diaporama</string>
+   </property>
+   <property name="toolTip">
+    <string>Changer diaporama</string>
+   </property>
+  </action>
+  <action name="actionAvancer">
+   <property name="text">
+    <string>Avancer</string>
+   </property>
+   <property name="shortcut">
+    <string>Ctrl+D</string>
+   </property>
+  </action>
+  <action name="actionReculer">
+   <property name="text">
+    <string>Reculer</string>
+   </property>
+   <property name="shortcut">
+    <string>Ctrl+Q</string>
+   </property>
+  </action>
+  <action name="actionQuitter">
+   <property name="text">
+    <string>Quitter</string>
+   </property>
+  </action>
+  <action name="actionAuto">
+   <property name="text">
+    <string>Mode Automatique</string>
+   </property>
+  </action>
+  <action name="actionManuel">
+   <property name="text">
+    <string>Mode Manuel</string>
+   </property>
+  </action>
+  <action name="actionAProposDe">
+   <property name="text">
+    <string>A propos de ...</string>
+   </property>
+  </action>
+  <action name="actionEnleverDiapo">
+   <property name="text">
+    <string>Enlever diaporama</string>
+   </property>
+  </action>
+ </widget>
+ <resources/>
+ <connections/>
+</ui>
